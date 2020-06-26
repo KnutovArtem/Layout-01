@@ -1,0 +1,236 @@
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+html {
+  width: 100%;
+  height: 100%
+}
+body {
+  line-height: 1
+}
+li,
+ol,
+ul {
+  list-style: none
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0
+}
+caption,
+td,
+th {
+  text-align: left;
+  font-weight: 400
+}
+a {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer
+}
+a:hover {
+  text-decoration: none
+}
+input {
+  outline: 0;
+  border: none;
+  background: 0 0
+}
+span:active,
+span:focus,
+span:hover {
+  outline: 0
+}
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  background-color: initial;
+  cursor: pointer
+}
+button:active,
+button:focus,
+button:hover {
+  outline: 0
+}
+select {
+  outline: 0;
+  border: none
+}
+textarea {
+  border: none;
+  outline: 0;
+  resize: none;
+  overflow: auto
+}
+textarea::-webkit-input-placeholder {
+  color: #000
+}
+textarea:-moz-placeholder {
+  color: #000
+}
+textarea::-moz-placeholder {
+  color: #000
+}
+textarea:-ms-input-placeholder {
+  color: #000
+}
+@font-face {
+  font-family: helveticaneuecyr-300;
+  font-style: lighter;
+  font-weight: 300;
+  src: url(../fonts/HelveticaNeuecyrLight/HelveticaNeuecyrLight.eot) format("eot")
+}
+@font-face {
+  font-family: helveticaneuecyr-300;
+  font-style: lighter;
+  font-weight: 300;
+  src: url(../fonts/HelveticaNeuecyrLight/HelveticaNeuecyrLight.ttf) format("ttf")
+}
+@font-face {
+  font-family: helveticaneuecyr-300;
+  font-style: lighter;
+  font-weight: 300;
+  src: url(../fonts/HelveticaNeuecyrLight/HelveticaNeuecyrLight.woff) format("woff")
+}
+@font-face {
+  font-family: helveticaneuecyr-400;
+  font-style: Normal;
+  font-weight: 400;
+  src: url(../fonts/HelveticaNeuecyrRegular/HelveticaNeuecyrRegular.eot) format("eot")
+}
+@font-face {
+  font-family: helveticaneuecyr-400;
+  font-style: Normal;
+  font-weight: 400;
+  src: url(../fonts/HelveticaNeuecyrRegular/HelveticaNeuecyrRegular.ttf) format("ttf")
+}
+@font-face {
+  font-family: helveticaneuecyr-400;
+  font-style: Normal;
+  font-weight: 400;
+  src: url(../fonts/HelveticaNeuecyrRegular/HelveticaNeuecyrRegular.woff) format("woff")
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: helveticaneuecyr-300,sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden
+}
+body .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px
+}
+@media screen and (max-width:1200px) {
+  body .container {
+    padding: 0 6vw!important
+  }
+}
+body .button {
+  padding: 5px 15px;
+  background: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 3px rgba(0,0,0,.1);
+  box-shadow: 0 5px 3px rgba(0,0,0,.1)
+}
+body .button:active {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px)
+}
+body .title {
+  font-size: 30px
+}
+body .subtitle {
+  font-size: 24px
+}
