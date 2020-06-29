@@ -1,0 +1,132 @@
+/* Block: Discounts or the best product
+  ------------------------------------- */
+.discounts{
+  display: grid;
+  grid-gap: 30px; /*in grid-template-columns*/
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% calc(25% - 30px) calc(25% - 30px);
+  grid-template-areas: 'a b b' 'a c d';
+  width: 100%;
+  height: 700px;
+  @extend %margin-bottom-section; /*in mixins*/
+
+  .discounts__product{
+    position: relative;
+  }
+
+  /*Mixins card-products styles*/
+  @mixin card-product($area, $color){
+    grid-area: $area;
+    background: $color;
+  }
+
+  @mixin discount-title($mb){
+    max-width: 215px;
+    margin-bottom: $mb;
+    font-family: $font-500;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  @mixin discount-img($top, $left, $right, $w, $h){
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    width: $w;
+    height: $h;
+  }
+
+  @mixin discount-price($font, $color, $size){
+    font-family: $font;
+    color: $color;
+    font-size: $size;
+  }
+  /*End Mixins card-products styles*/
+
+  /*card-product number 1*/
+  .discounts__product:nth-child(1){
+    @include card-product(a, $text-color-3);
+    padding: 65px 65px 30px 65px;
+
+    .discount-title{
+      @include discount-title(30px);
+    }
+
+    .discount-img{
+      @include discount-img(25%, 25%, auto, 50%, auto);
+    }
+
+    .discount-price{
+      @include discount-price($font-600, $text-color-5, 20px);
+    }
+  }
+
+  /*card-product number 2*/
+  .discounts__product:nth-child(2){
+    @include card-product(b, $text-color-2);
+    padding: 65px 30px 30px;
+    color: #fff;
+
+    .discount-title{
+      @include discount-title(30px);
+    }
+
+    .discount-img{
+      @include discount-img(10%, auto, 10%, auto, 80%);
+    }
+
+    .discount-price{
+      @include discount-price($font-600, $text-color-3, 20px);
+    }
+  }
+
+  /*card-product number 3*/
+  .discounts__product:nth-child(3){
+    @include card-product(c, $text-color-3);
+    padding: 30px;
+
+    .discount-title{
+      @include discount-title(10px);
+    }
+
+    .discount-img{
+      @include discount-img(20%, auto, 0, auto, 70%);
+    }
+
+    .discount-price{
+      @include discount-price($font-600, $text-color-2, 20px);
+    }
+  }
+
+  /*card-product number 4*/
+  .discounts__product:nth-child(4){
+    @include card-product(d, $text-color-3);
+    padding: 30px;
+
+    .discount-title{
+      @include discount-title(10px);
+    }
+
+    .discount-img{
+      @include discount-img(10%, auto, 5%, auto, 80%);
+    }
+
+    .discount-price{
+      @include discount-price($font-600, $text-color-2, 20px);
+    }
+  }
+
+  /*in the cards number 3/4*/
+  .old-price{
+    color: #000 !important;
+    text-decoration: line-through;
+    font-family: $font-500;
+  }
+
+  .discount-desc{
+    position: absolute;
+    bottom: 30px;
+  }
+
+}

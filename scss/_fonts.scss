@@ -8,29 +8,46 @@
   }
 }
 
-@include font('helveticaneuecyr-300', lighter, 300, '../fonts/HelveticaNeuecyrLight/HelveticaNeuecyrLight.eot', 'eot');
-@include font('helveticaneuecyr-300', lighter, 300, '../fonts/HelveticaNeuecyrLight/HelveticaNeuecyrLight.ttf', 'ttf');
-@include font('helveticaneuecyr-300', lighter, 300, '../fonts/HelveticaNeuecyrLight/HelveticaNeuecyrLight.woff', 'woff');
+@include font('gilroy-100', Thin, 100, '../fonts/Gilroy/Gilroy-Thin/Gilroy-Thin.eot', 'eot');
+@include font('gilroy-100', Thin, 100, '../fonts/Gilroy/Gilroy-Thin/Gilroy-Thin.ttf', 'ttf');
+@include font('gilroy-100', Thin, 100, '../fonts/Gilroy/Gilroy-Thin/Gilroy-Thin.woff', 'woff');
 
-@include font('helveticaneuecyr-400', Normal, 400, '../fonts/HelveticaNeuecyrRegular/HelveticaNeuecyrRegular.eot', 'eot');
-@include font('helveticaneuecyr-400', Normal, 400, '../fonts/HelveticaNeuecyrRegular/HelveticaNeuecyrRegular.ttf', 'ttf');
-@include font('helveticaneuecyr-400', Normal, 400, '../fonts/HelveticaNeuecyrRegular/HelveticaNeuecyrRegular.woff', 'woff');
+@include font('gilroy-200', UltraLight, 200, '../fonts/Gilroy/Gilroy-UltraLight/Gilroy-UltraLight.eot', 'eot');
+@include font('gilroy-200', UltraLight, 200, '../fonts/Gilroy/Gilroy-UltraLight/Gilroy-UltraLight.ttf', 'ttf');
+@include font('gilroy-200', UltraLight, 200, '../fonts/Gilroy/Gilroy-UltraLight/Gilroy-UltraLight.woff', 'woff');
 
- /* hint
- 100 - Thin (Hairline)
- 200 - Extra Light (Ultra Light)
- 300 - Light (Book)
- 400 - Normal (Regular)
- 500 - Medium
- 600 - Semi Bold (Demi Bold)
- 700 - Bold
- 800 - Extra Bold (Ultra Bold)
- 900 - Black (Heavy)
-*/
-/*
- @font-face
- 	font-family: 'raleway-example'
- 	src: url('../fonts/RalewayBold.woff') format('woff')
- 	font-weight: bold
- */
+@include font('gilroy-300', lighter, 300, '../fonts/Gilroy/Gilroy-Light/Gilroy-Light.eot', 'eot');
+@include font('gilroy-300', lighter, 300, '../fonts/Gilroy/Gilroy-Light/Gilroy-Light.ttf', 'ttf');
+@include font('gilroy-300', lighter, 300, '../fonts/Gilroy/Gilroy-Light/Gilroy-Light.woff', 'woff');
+
+@include font('gilroy-400', Normal, 400, '../fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.eot', 'eot');
+@include font('gilroy-400', Normal, 400, '../fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.ttf', 'ttf');
+@include font('gilroy-400', Normal, 400, '../fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.woff', 'woff');
+
+@include font('gilroy-500', Medium, 500, '../fonts/Gilroy/Gilroy-Medium/Gilroy-Medium.eot', 'eot');
+@include font('gilroy-500', Medium, 500, '../fonts/Gilroy/Gilroy-Medium/Gilroy-Medium.ttf', 'ttf');
+@include font('gilroy-500', Medium, 500, '../fonts/Gilroy/Gilroy-Medium/Gilroy-Medium.woff', 'woff');
+
+@include font('gilroy-600', SemiBold, 600, '../fonts/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold.eot', 'eot');
+@include font('gilroy-600', SemiBold, 600, '../fonts/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold.ttf', 'ttf');
+@include font('gilroy-600', SemiBold, 600, '../fonts/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold.woff', 'woff');
+
+@include font('gilroy-700', Bold, 700, '../fonts/Gilroy/Gilroy-Bold/Gilroy-Bold.eot', 'eot');
+@include font('gilroy-700', Bold, 700, '../fonts/Gilroy/Gilroy-Bold/Gilroy-Bold.ttf', 'ttf');
+@include font('gilroy-700', Bold, 700, '../fonts/Gilroy/Gilroy-Bold/Gilroy-Bold.woff', 'woff');
+
+@include font('gilroy-800', ExtraBold, 800, '../fonts/Gilroy/Gilroy-ExtraBold/Gilroy-ExtraBold.eot', 'eot');
+@include font('gilroy-800', ExtraBold, 800, '../fonts/Gilroy/Gilroy-ExtraBold/Gilroy-ExtraBold.ttf', 'ttf');
+@include font('gilroy-800', ExtraBold, 800, '../fonts/Gilroy/Gilroy-ExtraBold/Gilroy-ExtraBold.woff', 'woff');
+
+@include font('gilroy-900', Black, 900, '../fonts/Gilroy/Gilroy-Black/Gilroy-Black.eot', 'eot');
+@include font('gilroy-900', Black, 900, '../fonts/Gilroy/Gilroy-Black/Gilroy-Black.ttf', 'ttf');
+@include font('gilroy-900', Black, 900, '../fonts/Gilroy/Gilroy-Black/Gilroy-Black.woff', 'woff');
+
+/* Icon Fonts
+  ------------------------------------- */
+@include font('fontello', Normal, 100, '../fonts/IconFonts/fontello.eot?74784196', 'eot');
+@include font('fontello', Normal, 100, '../fonts/IconFonts/fontello.ttf?74784196', 'ttf');
+@include font('fontello', Normal, 100, '../fonts/IconFonts/fontello.woff?74784196', 'woff');
+
 

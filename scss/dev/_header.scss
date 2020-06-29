@@ -1,0 +1,77 @@
+/*Header*/
+.header {
+  @include flex-center-vertical();
+  height: 110px;
+
+  &-logo {
+    flex-grow: 1;
+  }
+
+  /*menu*/
+  &-menu {
+    margin-right: 140px; /* ~11vw / 15% / 140px*/
+
+    &__items {
+      display: flex;
+    }
+
+    &__item:nth-child(-n+5) {
+      margin-right: 50px;
+    }
+
+    /*icon*/
+    @mixin mixintest($rotate) {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        width: 10px;
+        height: 10px;
+        transform: rotate($rotate);
+        background: url(../../img/dist/chevron-down.svg) no-repeat 50% 50%/100%;
+      }
+    }
+
+    .down {
+      @include mixintest(0deg);
+    }
+
+    .up {
+      @include mixintest(180deg);
+    }
+
+    &__item {
+      cursor: pointer;
+    }
+  }
+
+  /*buttons*/
+  &-buttons {
+    @include flex-center-vertical();
+
+    @mixin img-bg($url, $w, $h) {
+      background: url($url) no-repeat 50% 50%/100%;
+      width: $w;
+      height: $h;
+    }
+
+    &__search {
+      @include img-bg('../../img/dist/search.svg', 20px, 20px);
+    }
+
+    &__bookmarks {
+      @include img-bg('../../img/dist/heart.svg', 20px, 20px);
+    }
+
+    &__basket {
+      @include img-bg('../../img/dist/bag.svg', 22px, 22px);
+    }
+  }
+
+  .header-buttons button:nth-child(-n+2) {
+    margin-right: 35px;
+  }
+
+}

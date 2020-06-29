@@ -1,0 +1,106 @@
+/*banner-slider*/
+.banner-slider {
+  position: relative;
+  height: 700px;
+  @extend %margin-bottom-section;
+
+  .swiper-container {
+    position: relative;
+    height: 100%;
+
+    /*slides*/
+    .swiper-wrapper {
+      .swiper-slide {
+        padding: 50px;
+      }
+
+      .slide-1 {
+        background: #f3f3f3;
+      }
+
+      .slide-2 {
+        background: #dceed5;
+      }
+
+      .slide-3 {
+        background: #debbbb;
+      }
+    }
+
+    /* Points */
+    .swiper-pagination {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      left: 50px;
+      width: 50px;
+      height: 100%;
+
+      .swiper-pagination-bullet:nth-child(-n+3) {
+        width: 5px;
+        height: 5px;
+        background: #000;
+        opacity: 1;
+        margin: 15px;
+        border-radius: 50%;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% - 15px);
+          left: calc(50% - 15px);
+          width: 30px;
+          height: 30px;
+          border: 1px solid #000;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    /* Arrows */
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: auto;
+      bottom: 50px;
+      background: url(../../img/dist/chevron-down.svg) no-repeat 50% 50%/100%;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+    }
+
+    @mixin butSwiperPos($right, $rotate) {
+      left: auto;
+      right: $right;
+      transform: rotate($rotate);
+    }
+
+    .swiper-button-prev {
+      @include butSwiperPos(100px, 90deg);
+    }
+
+    .swiper-button-next {
+      @include butSwiperPos(50px, -90deg);
+
+    }
+
+  }
+
+  /*Icon mouse */
+  .icon-mouse {
+    @include flex-center-horisontal();
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+}
