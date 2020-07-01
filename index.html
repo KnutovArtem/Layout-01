@@ -6,14 +6,108 @@
     <meta name='description' content=''> <!--Page description-->
     <meta name='keywords' content=''><!--Keyword-->
     <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
-    <title>Starting template</title>
-    <link rel='shortcut icon' href='img/dist/favicon/favicon.ico' type='image/x-icon' sizes="16x16">
+    <title>Layout-01</title>
+    <link rel='shortcut icon' href='img/dist/favicon/favicon.ico' type='image/x-icon' sizes='16x16'>
     <link rel='stylesheet' href='css/main.min.css'>
 </head>
 <body>
-
 <div class='main-wrapper'>
 
+    <!--header-->
+    <header class='header'>
+        <div class='container'>
+
+            <div class='header-logo logo'>LoGo <span>.</span></div>
+            <div class='header-menu'>
+                <ul class='header-menu__items'>
+                    <li class='header-menu__item menu-item-active'><a href='#'>Home</a></li>
+                    <li class='header-menu__item down'>
+                        <a href='#'>Shop</a>
+                    </li>
+                    <li class='header-menu__item down'>
+                        <a href='#'>Collections</a>
+                    </li>
+                    <li class='header-menu__item down'>
+                        <a href='#'>Blog</a>
+                    </li>
+                    <li class='header-menu__item down'>
+                        <a href='#'>Pages</a>
+                    </li>
+                    <li class='header-menu__item down'>
+                        <a href='#'>Elements</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='header-buttons'>
+                <button class='header-buttons__search'></button>
+                <button class='header-buttons__bookmarks'></button>
+                <button class='header-buttons__basket'></button>
+            </div>
+
+            <div class='dropdown-menu'>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class='container'>
+
+        <!--banner-slider-->
+        <div class='banner-slider'>
+            <div class='swiper-container'>
+                <div class='swiper-wrapper'>
+                    <div class='swiper-slide slide-1'>Slide 1</div>
+                    <div class='swiper-slide slide-2'>Slide 2</div>
+                    <div class='swiper-slide slide-3'>Slide 3</div>
+                </div>
+                <div class='swiper-pagination'></div>
+                <div class='swiper-button-prev'></div>
+                <div class='swiper-button-next'></div>
+            </div>
+            <div class='icon-mouse'>
+                <img src='img/mouse.svg' alt=''>
+            </div>
+        </div>
+
+        <!--Block: Discounts or the best product-->
+        <div class='discounts'>
+
+            <!--card number 1-->
+            <div class='discounts__product'>
+                <p class='discount-title'>Bold Chronograph Rose Dial Ladies Watch</p>
+                <p class='discount-price'>$<span>450.00</span></p>
+                <img class='discount-img' src='http://artemknutov.tech/layout1/img/dist/products/clock/01.png' alt='clock'>
+                <p class='discount-desc'>Show NOW</p>
+            </div>
+
+            <!--card number 2-->
+            <div class='discounts__product'>
+                <p class='discount-title'>Bold Chronograph Rose Dial Ladies</p>
+                <p class='discount-price'>$<span>450.00</span></p>
+                <img class='discount-img' src='http://artemknutov.tech/layout1/img/dist/products/clock/02.png' alt='clock'>
+            </div>
+
+            <!--card number 3-->
+            <div class='discounts__product'>
+                <p class='discount-title'>Bold Chronograph Rose Dial Ladies</p>
+                <p class='discount-price old-price'>$<span>450.00</span></p>
+                <p class='discount-price'>$<span>450.00</span></p>
+                <img class='discount-img' src='http://artemknutov.tech/layout1/img/dist/products/bags/01.png' alt='clock'>
+                <p class='discount-desc'>Leather Shoulder Bag</p>
+            </div>
+
+            <!--card number 4-->
+            <div class='discounts__product'>
+                <p class='discount-title'>Bold Chronograph Rose Dial Ladies</p>
+                <p class='discount-price old-price'>$<span>450.00</span></p>
+                <p class='discount-price'>$<span>450.00</span></p>
+                <img class='discount-img' src='http://artemknutov.tech/layout1/img/dist/products/shoes/01.png' alt='clock'>
+                <p class='discount-desc'>Adidas Red Sneaker</p>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <script src='js/script.min.js'></script>

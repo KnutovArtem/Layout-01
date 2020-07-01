@@ -67,7 +67,7 @@
     .swiper-button-prev {
       top: auto;
       bottom: 50px;
-      background: url(../../img/dist/chevron-down.svg) no-repeat 50% 50%/100%;
+      background: url('http://artemknutov.tech/layout1/img/dist/chevron-down.svg') no-repeat 50% 50%/100%;
     }
 
     .swiper-button-next:after,
@@ -100,7 +100,7 @@
     position: absolute;
     bottom: 50px;
     width: 100%;
-    z-index: 100;
+    z-index: 2;
     transform: rotate(180deg);
   }
 }

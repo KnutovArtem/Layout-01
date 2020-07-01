@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Заголовок1",
+    "items": [
+      { "item": "Пункт1", "url": "https://metanit.com/web/javascript/4.2.php"},
+      { "item": "Пункт2", "url": "https://metanit.com/web/javascript/4.2.php"},
+      { "item": "Пункт3", "url": "https://metanit.com/web/javascript/4.2.php"}
+    ]
+  },
+  {
+    "title": "Заголовок2",
+    "items": [
+      { "item": "Пункт4", "url": "https://metanit.com/web/javascript/4.2.php"},
+      { "item": "Пункт5", "url": "https://metanit.com/web/javascript/4.2.php"},
+      { "item": "Пункт6", "url": "https://metanit.com/web/javascript/4.2.php"},
+      { "item": "Пункт7", "url": "https://metanit.com/web/javascript/4.2.php"},
+      { "item": "Пункт8", "url": "https://metanit.com/web/javascript/4.2.php"}
+    ]
+  }
+]
