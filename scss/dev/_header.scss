@@ -21,110 +21,140 @@
 /* -------------------------------------
 End mixins */
 
-.header{
+.wrapper-header{
+  @include flex-center-vertical();
   position: relative;
   width: 100%;
   height: 110px;
   background: #fff;
-  transition: transform .7s ease-out;
+  transition: transform .2s ease-out;
   z-index: 3;
 
-  .container{
-    @include flex-center-vertical();
-    position: relative;
+
+  .header{
+    width: inherit;
     height: inherit;
 
-    .dropdown-menu{
-      display: flex;
-      position: absolute;
-      top: 100%;
-      left: 0;
+    .container{
+      @include flex-center-vertical();
+      position: relative;
       width: 100%;
-      min-height: 300px;
-      padding: 30px 170px;
+      height: inherit;
       background: #fff;
-      border:{
-        top: 1px solid $text-color-3;
-        bottom: 1.5px solid $text-color-1;
+      z-index: 2;
+
+      .header-logo{
+        flex-grow: 1;
+        @media screen and (max-width: 1170px){
+        }
       }
 
-      .dropdown-menu__items{
-        margin: 0 60px 0 0;
+      /*menu*/
+      .header-menu{
+        margin-right: 140px; /* ~11vw / 15% / 140px*/
 
-        .dropdown-menu__title{
-          font-family: $font-600;
-          margin: 0 0 15px 0;
+        .header-menu__items{
+          display: flex;
+
+          .header-menu__item{
+            cursor: pointer;
+
+            &:nth-child(-n+5){
+              margin-right: 50px;
+            }
+
+            a:hover{
+              transition: all 0.4s ease;
+              color: $text-color-2;
+            }
+          }
+
+          .down{ @include arrowIcon(0deg); }
+
+          .up{ @include arrowIcon(180deg); }
+
         }
 
-        .dropdown-menu__item{
-          width: max-content;
-          margin-bottom: 10px;
+      }
+
+      /*buttons*/
+      .header-buttons{
+        @include flex-center-vertical();
+
+        @mixin img-bg($url, $w, $h){
+          background: url($url) no-repeat 50% 50%/100%;
+          width: $w;
+          height: $h;
+        }
+
+        &__search{
+          @include img-bg('http://artemknutov.tech/layout1/img/dist/search.svg', 20px, 20px);
+        }
+
+        &__bookmarks{
+          @include img-bg('http://artemknutov.tech/layout1/img/dist/heart.svg', 20px, 20px);
+        }
+
+        &__basket{
+          @include img-bg('http://artemknutov.tech/layout1/img/dist/bag.svg', 22px, 22px);
+        }
+      }
+
+      .header-buttons button:nth-child(-n+2){
+        margin-right: 35px;
+      }
+    }
+  }
+
+  .dropdown-menu{
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    padding: 30px 170px;
+    background: #fff;
+    border:{
+      top: 1px solid $text-color-3;
+      bottom: 1.5px solid $text-color-1;
+    }
+    transition: all 0.4s ease 0.1s;
+    transform: translateY(-100%);
+    z-index: 1;
+
+    .dropdown-menu__items{
+      margin: 0 60px 0 0;
+
+      .dropdown-menu__item:nth-child(-n+1) a{
+        font-family: $font-500;
+        margin: 0 0 15px 0;
+        color: #000;
+      }
+
+      .dropdown-menu__item{
+        width: max-content;
+        margin-bottom: 10px;
+
+        &:hover{
+          transition: all 0.3s ease;
+          transform: translateX(5px);
+        }
+
+        a{
+          color: #6f6f6f;
+
           &:hover{
-            transition: all 0.3s ease;
-            transform: translateX(5px);
-          }
-          a{
-            border: 1px dotted red;
+            color: $text-color-2;
           }
         }
       }
     }
   }
 
-  .header-logo{
-    flex-grow: 1;
-    @media screen and (max-width: 1170px){
-    }
-  }
-
-  /*menu*/
-  .header-menu{
-    margin-right: 140px; /* ~11vw / 15% / 140px*/
-
-    .header-menu__items{
-      display: flex;
-
-      .header-menu__item{
-        cursor: pointer;
-
-        &:nth-child(-n+5){
-          margin-right: 50px;
-        }
-      }
-
-      .down{ @include arrowIcon(0deg); }
-
-      .up{ @include arrowIcon(180deg); }
-
-    }
-
-  }
-
-  /*buttons*/
-  &-buttons{
-    @include flex-center-vertical();
-
-    @mixin img-bg($url, $w, $h){
-      background: url($url) no-repeat 50% 50%/100%;
-      width: $w;
-      height: $h;
-    }
-
-    &__search{
-      @include img-bg('http://artemknutov.tech/layout1/img/dist/search.svg', 20px, 20px);
-    }
-
-    &__bookmarks{
-      @include img-bg('http://artemknutov.tech/layout1/img/dist/heart.svg', 20px, 20px);
-    }
-
-    &__basket{
-      @include img-bg('http://artemknutov.tech/layout1/img/dist/bag.svg', 22px, 22px);
-    }
-  }
-
-  .header-buttons button:nth-child(-n+2){
-    margin-right: 35px;
+  .dropdown-menu_active{
+    transition: all 0.4s ease 0.1s;
+    transform: translateY(0%);
   }
 }
 

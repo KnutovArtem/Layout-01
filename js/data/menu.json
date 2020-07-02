@@ -1,20 +1,113 @@
 [
   {
-    "title": "Заголовок1",
-    "items": [
-      { "item": "Пункт1", "url": "https://metanit.com/web/javascript/4.2.php"},
-      { "item": "Пункт2", "url": "https://metanit.com/web/javascript/4.2.php"},
-      { "item": "Пункт3", "url": "https://metanit.com/web/javascript/4.2.php"}
+    "mainitem1": [
+      {
+        "items1": [
+          {
+            "item": "Новые поступления",
+            "url": "#"
+          },
+          {
+            "item": "Одежда",
+            "url": "#"
+          },
+          {
+            "item": "Обувь и аксессуары",
+            "url": "#"
+          }
+        ],
+        "items2": [
+          {
+            "item": "Сезонные тренды",
+            "url": "#"
+          },
+          {
+            "item": "Летняя коллекция",
+            "url": "#"
+          },
+          {
+            "item": "Мягкая одежда для работы на дому",
+            "url": "#"
+          }
+        ],
+        "items3": [
+          {
+            "item": "Выбрать категорию",
+            "url": "#"
+          },
+          {
+            "item": "Просмотреть все",
+            "url": "#"
+          },
+          {
+            "item": "Футболки и майки",
+            "url": "#"
+          },
+          {
+            "item": "Худи и свитшоты",
+            "url": "#"
+          },
+          {
+            "item": "Рубашки",
+            "url": "#"
+          },
+          {
+            "item": "Шорты",
+            "url": "#"
+          },
+          {
+            "item": "Брюки",
+            "url": "#"
+          },
+          {
+            "item": "Джинсы",
+            "url": "#"
+          }
+
+        ]
+      }
     ]
   },
   {
-    "title": "Заголовок2",
-    "items": [
-      { "item": "Пункт4", "url": "https://metanit.com/web/javascript/4.2.php"},
-      { "item": "Пункт5", "url": "https://metanit.com/web/javascript/4.2.php"},
-      { "item": "Пункт6", "url": "https://metanit.com/web/javascript/4.2.php"},
-      { "item": "Пункт7", "url": "https://metanit.com/web/javascript/4.2.php"},
-      { "item": "Пункт8", "url": "https://metanit.com/web/javascript/4.2.php"}
+    "mainitem2": [
+      {
+        "items1": [
+          {
+            "item": "Новые поступления",
+            "url": "#"
+          },
+          {
+            "item": "Одежда",
+            "url": "#"
+          },
+          {
+            "item": "Обувь и аксессуары",
+            "url": "#"
+          },
+          {
+            "item": "Нижнее белье и одежда для сна",
+            "url": "#"
+          },
+          {
+            "item": "Пляжная одежда",
+            "url": "#"
+          }
+        ],
+        "items2": [
+          {
+            "item": "Наши тренды",
+            "url": "#"
+          },
+          {
+            "item": "Летние расцветки",
+            "url": "#"
+          },
+          {
+            "item": "Летние комбинезоны",
+            "url": "#"
+          }
+        ]
+      }
     ]
   }
 ]

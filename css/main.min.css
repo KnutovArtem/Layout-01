@@ -867,19 +867,7 @@ body .menu-item-active a {
 body .subtitle {
   font-size: 24px
 }
-.header {
-  position: relative;
-  width: 100%;
-  height: 110px;
-  background: #fff;
-  -webkit-transition: -webkit-transform .7s ease-out;
-  transition: -webkit-transform .7s ease-out;
-  -o-transition: transform .7s ease-out;
-  transition: transform .7s ease-out;
-  transition: transform .7s ease-out,-webkit-transform .7s ease-out;
-  z-index: 3
-}
-.header .container {
+.wrapper-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -887,69 +875,62 @@ body .subtitle {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
+  height: 110px;
+  background: #fff;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: -webkit-transform .2s ease-out;
+  -o-transition: transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out,-webkit-transform .2s ease-out;
+  z-index: 3
+}
+.wrapper-header .header {
+  width: inherit;
   height: inherit
 }
-.header .container .dropdown-menu {
+.wrapper-header .header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
   width: 100%;
-  min-height: 300px;
-  padding: 30px 170px;
+  height: inherit;
   background: #fff;
-  border-top: 1px solid #f3f3f3;
-  border-bottom: 1.5px solid #000
+  z-index: 2
 }
-.header .container .dropdown-menu .dropdown-menu__items {
-  margin: 0 60px 0 0
-}
-.header .container .dropdown-menu .dropdown-menu__items .dropdown-menu__title {
-  font-family: gilroy-600,sans-serif;
-  margin: 0 0 15px 0
-}
-.header .container .dropdown-menu .dropdown-menu__items .dropdown-menu__item {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-bottom: 10px
-}
-.header .container .dropdown-menu .dropdown-menu__items .dropdown-menu__item:hover {
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px)
-}
-.header .container .dropdown-menu .dropdown-menu__items .dropdown-menu__item a {
-  border: 1px dotted red
-}
-.header .header-logo {
+.wrapper-header .header .container .header-logo {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1
 }
-.header .header-menu {
+.wrapper-header .header .container .header-menu {
   margin-right: 140px
 }
-.header .header-menu .header-menu__items {
+.wrapper-header .header .container .header-menu .header-menu__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex
 }
-.header .header-menu .header-menu__items .header-menu__item {
+.wrapper-header .header .container .header-menu .header-menu__items .header-menu__item {
   cursor: pointer
 }
-.header .header-menu .header-menu__items .header-menu__item:nth-child(-n+5) {
+.wrapper-header .header .container .header-menu .header-menu__items .header-menu__item:nth-child(-n+5) {
   margin-right: 50px
 }
-.header .header-menu .header-menu__items .down {
+.wrapper-header .header .container .header-menu .header-menu__items .header-menu__item a:hover {
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  color: #dc5a40
+}
+.wrapper-header .header .container .header-menu .header-menu__items .down {
   position: relative
 }
-.header .header-menu .header-menu__items .down::before {
+.wrapper-header .header .container .header-menu .header-menu__items .down::before {
   content: '';
   position: absolute;
   top: 8px;
@@ -961,10 +942,10 @@ body .subtitle {
   transform: rotate(0);
   background: url(http://artemknutov.tech/layout1/img/dist/chevron-down.svg) no-repeat 50% 50%/100%
 }
-.header .header-menu .header-menu__items .up {
+.wrapper-header .header .container .header-menu .header-menu__items .up {
   position: relative
 }
-.header .header-menu .header-menu__items .up::before {
+.wrapper-header .header .container .header-menu .header-menu__items .up::before {
   content: '';
   position: absolute;
   top: 8px;
@@ -976,7 +957,7 @@ body .subtitle {
   transform: rotate(180deg);
   background: url(http://artemknutov.tech/layout1/img/dist/chevron-down.svg) no-repeat 50% 50%/100%
 }
-.header-buttons {
+.wrapper-header .header .container .header-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -984,23 +965,80 @@ body .subtitle {
   -ms-flex-align: center;
   align-items: center
 }
-.header-buttons__search {
+.wrapper-header .header .container .header-buttons__search {
   background: url(http://artemknutov.tech/layout1/img/dist/search.svg) no-repeat 50% 50%/100%;
   width: 20px;
   height: 20px
 }
-.header-buttons__bookmarks {
+.wrapper-header .header .container .header-buttons__bookmarks {
   background: url(http://artemknutov.tech/layout1/img/dist/heart.svg) no-repeat 50% 50%/100%;
   width: 20px;
   height: 20px
 }
-.header-buttons__basket {
+.wrapper-header .header .container .header-buttons__basket {
   background: url(http://artemknutov.tech/layout1/img/dist/bag.svg) no-repeat 50% 50%/100%;
   width: 22px;
   height: 22px
 }
-.header .header-buttons button:nth-child(-n+2) {
+.wrapper-header .header .container .header-buttons button:nth-child(-n+2) {
   margin-right: 35px
+}
+.wrapper-header .dropdown-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 300px;
+  padding: 30px 170px;
+  background: #fff;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1.5px solid #000;
+  -webkit-transition: all .4s ease .1s;
+  -o-transition: all .4s ease .1s;
+  transition: all .4s ease .1s;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  z-index: 1
+}
+.wrapper-header .dropdown-menu .dropdown-menu__items {
+  margin: 0 60px 0 0
+}
+.wrapper-header .dropdown-menu .dropdown-menu__items .dropdown-menu__item:nth-child(-n+1) a {
+  font-family: gilroy-500,sans-serif;
+  margin: 0 0 15px 0;
+  color: #000
+}
+.wrapper-header .dropdown-menu .dropdown-menu__items .dropdown-menu__item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 10px
+}
+.wrapper-header .dropdown-menu .dropdown-menu__items .dropdown-menu__item:hover {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px)
+}
+.wrapper-header .dropdown-menu .dropdown-menu__items .dropdown-menu__item a {
+  color: #6f6f6f
+}
+.wrapper-header .dropdown-menu .dropdown-menu__items .dropdown-menu__item a:hover {
+  color: #dc5a40
+}
+.wrapper-header .dropdown-menu_active {
+  -webkit-transition: all .4s ease .1s;
+  -o-transition: all .4s ease .1s;
+  transition: all .4s ease .1s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0)
 }
 .header_fixed {
   position: fixed;
